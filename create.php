@@ -1,11 +1,11 @@
 <?php
 
-    $connection = new mysqli("localhost", "root", "", "latihan");
+    $connection = new mysqli("localhost", "root", "", "note_app");
     $title      = $_POST['title']; 
     $content    = $_POST['content'];
     $date       = date('Y-m-d');
     
-    $result = mysqli_query($connection, "insert into note_app set title='$title', content='$content', date='$date'");
+    $result = mysqli_query($connection, "insert into note set title='$title', content='$content', date='$date'");
     
     if($result){
         echo json_encode([
