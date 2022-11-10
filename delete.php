@@ -1,10 +1,10 @@
 <?php
 
-    $connection = new mysqli("localhost", "root", "", "latihan");
+    $connection = new mysqli("localhost", "root", "", "note_app");
 
     $id = $_POST['id'];
 
-    $result = mysqli_query($connection, "delete from note_app where id=".$id);
+    $result = mysqli_query($connection, "delete from note where id=".$id);
 
     if($result){
         echo json_encode([
